@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import mne
 import seaborn as sns
-data_path = r'C:\Users\hp\Desktop\EEG_preprocessed'
+data_path = r'datapath'
     
 
 # %%
@@ -15,7 +15,7 @@ data = pd.DataFrame(temp) # Create an empty dataframe with the columns we want
 
 # %%
 # Read the participants.tsv file
-participants = pd.read_csv(r'C:\Users\hp\Desktop\EEG\participants.tsv', sep= '\s+|\t+', engine='python')
+participants = pd.read_csv(r'path-to-csv-file', sep= '\s+|\t+', engine='python')
 data['subject'] = participants['participant_id'].copy()
 data.set_index('subject', inplace=True, drop=True)
 
